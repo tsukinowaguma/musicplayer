@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music player</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="main">
+	<div class="container clearfix">
+		<div class="musicplaybox">
+			<img class="musicbg" src="image/zsy.png">
+			<img class="musicprocess" src="image/yyjd.png">
+			<div class="musicplayer">
+				<img class="musicpic" 
+					src="image/fd039245d688d43f992e0adc7e1ed21b0ef43b1c.jpg">
+				<img class="control" src="image/play.png">
+				<div id="voiceico">
+					<i class="fa fa-volume-down" id="volicon"></i>
+				</div>
+				<div id = "MusicProgress" class="progress">
+					<div id="bar" style="width: 0%;"></div>
+					<a id="ProgressPoint" class="point" ></a>
+				</div>
+				<div id = "VoiceProgress" class="progress">
+					<div id="voicebar" style="width: 20%;"></div>
+					<a class="VoicePoint" class="point" ></a>
+				</div>
+				<div class="musictime">
+					<span id="current">00:00</span>/<span id="alltime">04:00</span>
+				</div>
+				<span id="volume">20</span>
+				<div id="songChange">
+					<span class="fa fa-step-backward " id="back" title="上一首"></span>
+					<span class="fa fa-step-forward " id="next" title="下一首"></span>
+				</div>
+				<span id="show" class="fa fa-eject" title="返回当前歌曲列表位置"></span>
+			</div>
+		</div>
+		<audio  id="music" src="music/初音ミク - freely tomorrow.mp3"  ></audio>
+		<div  id="menu">
+			<span class="fa-bars fa" id="menu_btt"></span>
+			<div id="menu_list">
+				<div id="once" class="light mode">
+				<span class="fa fa-play logo"></span><span>单曲播放</span>
+				</div>
+				<div id="once-cycle" class="mode">
+				<span class="fa fa-circle-o-notch fa-spin logo"></span><span>单曲循环</span>
+				</div>
+				<div id="list-play" class="mode">
+				<span class="fa fa-random logo"></span><span>列表播放</span>
+				</div>
+				<div id="list-cycle" class="mode">
+				<span class= "fa fa-refresh fa-spin logo"></span><span>列表循环</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="songmenu clearfix">
+		<div id="listmenu" class="clearfix" style="right:0%;">
+			<aside class="list1 "> 
+					<li class="item highlight" links="music/初音ミク - freely tomorrow.mp3">
+						<div class="pic"><img src="image/
+						fd039245d688d43f992e0adc7e1ed21b0ef43b1c.jpg"></div>
+						<div class="songinfo">
+							<span class="songtitle" >初音ミク - freely tomorrow</span>
+						</div>
+					</li>				
+					<li class="item" links="music/曖昧さ回避歌ってみた　月葉.mp3">
+						<div class="pic"><img src="image/20140720194904_awCxT.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle" >曖昧さ回避</span>
+						</div>
+					</li>				
+					<li class="item" links="music/空奏列車 歌ってみた／おん湯.mp3">
+						<div class="pic"><img src="image/20140911132552_xf8iQ.thumb.700_0.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle"  >空奏列車</span>
+						</div>
+					</li>
+					<li class="item" links="music/夜のくじら歌ってみた　月葉.mp3" >
+						<div class="pic"><img src="image/20141130093654_JX4Ge.thumb.700_0.png.jpg"></div>
+						<div class="songinfo">
+							<span class="songtitle" >夜のくじら</span>
+						</div>
+					</li>
+					<li class="item" links="music/夜明けと蛍.mp3">
+						<div class="pic"><img src="image/20160615114236_cS3da.thumb.700_0.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle">夜明けと蛍</span>
+						</div>
+					</li>
+					<li class="item" links="music/ぼくらのレットイットビー／あめだま＊.mp3">
+						<div class="pic"><img src="image/411217348823576.jpg"></div>
+						<div class="songinfo">
+							<span class="songtitle">ぼくらのレットイットビー</span>
+						</div>
+					</li>
+			</aside>
+			<aside class="list2 ">
+					<li class="item" links="music/【CiDRE】东京不太热.mp3">
+						<div class="pic"><img src="image/
+						1a0a08b93d8f66e0a7ec917fd91840b1.jpg"></div>
+						<div class="songinfo">
+							<span class="songtitle" >【CiDRE】东京不太热</span>
+						</div>
+					</li>				
+					<li class="item" links="music/【vip店長】夜里也始终想念着你.mp3">
+						<div class="pic"><img src="image/1d8e2e2f2716553308453cf8108b9ac9.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle" >【vip店長】夜里也始终想念着你</span>
+						</div>
+					</li>				
+					<li class="item" links="music/未来景イノセンス 歌ってみた【なゆごろう】.mp3">
+						<div class="pic"><img src="image/5f256fc475c4e3459332184f1954f77f.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle"  >未来景イノセンス</span>
+						</div>
+					</li>
+					<li class="item" links="music/【ちお】　サカサマノカサカラ　【歌ってみた】.mp3" >
+						<div class="pic"><img src="image/6ec43eaef9ef303e9fff2508f926b325.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle" > 【ちお】　サカサマノカサカラ </span>
+						</div>
+					</li>
+					<li class="item" links="music/FLOWER[日本] - 太陽と向日葵.mp3">
+						<div class="pic"><img src="image/50a6c8c379310a552a49bf0fb74543a983261068.jpg"></div>
+						<div class="songinfo">
+							<span class="songtitle">FLOWER 太陽と向日葵</span>
+						</div>
+					</li>
+					<li class="item" links="music/あのこどこのこ　うたったby岩見陸 .mp3">
+						<div class="pic"><img src="image/60d7e96325906d49fd9ecb179f3015f1.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle">あのこどこのこ</span>
+						</div>
+					</li>
+			</aside>
+			<aside class="list3 ">
+					<li class="item " links="music/アライン歌っ てみた　月葉.sm27846978.mp3">
+						<div class="pic"><img src="image/f850036444666e89563dc03573f233bb.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle" >アライン</span>
+						</div>
+					</li>				
+					<li class="item" links="music/クラベル歌ってみた　月葉.mp3">
+						<div class="pic"><img src="image/9736c882a0d66324c06509a157b4e422.png"></div>
+						<div class="songinfo">
+							<span class="songtitle" >クラベル</span>
+						</div>
+					</li>				
+					<li class="item" links="music/僕は ウミユリ海底譚 を歌ってみた【あう】.mp3">
+						<div class="pic"><img src="image/bed551f5177c1ce4687a3bcc5bd276c9.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle"  >僕は ウミユリ海底譚 </span>
+						</div>
+					</li>
+					<li class="item" links="music/すろぉもぉしょん　歌ってみた。.mp3" >
+						<div class="pic"><img src="image/c70a0b40a4ad66e1da59ce280a6c99a4.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle" >すろぉもぉしょん</span>
+						</div>
+					</li>
+					<li class="item" links="music/前前前世.mp3">
+						<div class="pic"><img src="image/cebda8364ea53acd40a4b959811c840c.jpeg"></div>
+						<div class="songinfo">
+							<span class="songtitle">前前前世</span>
+						</div>
+					</li>
+					<li class="item" links="music/鎖那 - 病名恋ワズライ.mp3">
+						<div class="pic"><img src="image/u=2455467362,200437584&fm=21&gp=0.jpg"></div>
+						<div class="songinfo">
+							<span class="songtitle">病名恋ワズライ</span>
+						</div>
+					</li>
+			</aside>
+		</div>
+		<div class="btt">
+			<span id="leftbtt">←</span>
+			<span id="rightbtt">→</span>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</div>
+</body>
+</html>
